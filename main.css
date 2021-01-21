@@ -5,11 +5,12 @@ table{
 }
 tr{
     border: 1px solid black;
-    height: 53px;
+    height: 63px;
 }
 td{
     border: 1px solid black;
-    width: 50px;
+    width: 60px;
+    user-select: none;
 }
 
 .bas{
@@ -30,4 +31,19 @@ td{
 
 button{
  margin-top: 5px;
+}
+
+div>div{
+    position: relative;
+    display: table-cell;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    user-select: none;
+
+}
+
+td>div{
+    position: relative;
+    user-select: none;
 }
