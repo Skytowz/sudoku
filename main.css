@@ -1,0 +1,33 @@
+table{
+    border: 5px solid black;
+    border-collapse: collapse; 
+    text-align: center;
+}
+tr{
+    border: 1px solid black;
+    height: 53px;
+}
+td{
+    border: 1px solid black;
+    width: 50px;
+}
+
+.bas{
+    border-bottom: 3px solid black;
+}
+
+.haut{
+    border-top: 3px solid black;
+}
+
+.right{
+    border-right: 3px solid black;
+}
+
+.left{
+    border-left: 3px solid black;
+}
+
+button{
+ margin-top: 5px;
+}
