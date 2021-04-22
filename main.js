@@ -46,24 +46,18 @@ document.onkeypress = function(e){
 
 
 document.onmousedown = function(e){ 
-    mouse = true;
     clear();
-    if(e.target.localName =="td") select(e.target); 
-    if(e.target.localName == "div"){
-        if(e.target.childElementCount == 3 && e.target.parentElement.localName == "td"){
-            select(e.target.parentElement);
-        }else if(e.target.childElementCount ==0 && e.target.parentElement.parentElement.localName =="td"){
-            select(e.target.parentElement.parentElement);
-        }
-    }   
-}
-document.onmouseup = function(e){
-    mouse = false;
+    mouse = true;
+    color(e);
 }
 
-document.onmouseover = function(e){
+document.getElementsByTagName("table")[0].onmouseover = function(e){
+    color(e);
+}
+
+function color(e){
     if(e.target.localName =="td" && mouse) select(e.target);
-    if(e.target.localName == "div" && mouse){
+    if(e.target.localName == "div"&& mouse){
         if(e.target.childElementCount == 3 && e.target.parentElement.localName == "td"){
             select(e.target.parentElement);
         }else if(e.target.childElementCount ==0 && e.target.parentElement.parentElement.localName =="td"){
@@ -71,6 +65,11 @@ document.onmouseover = function(e){
         }
     }
 }
+document.onmouseup = function(e){
+    mouse = false;
+}
+
+
 
 for (const i of td){
     i.innerHTML = "<div class=\"r1\"> <div class=\"1\"></div><div class=\"2\"></div><div class=\"3\"></div></div><div class=\"r2\"><div class=\"4\"></div><div class=\"5\"></div><div class=\"6\"></div></div><div class=\"r3\"><div class=\"7\"></div><div class=\"8\"></div><div class=\"9\"></div></div>"

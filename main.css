@@ -13,21 +13,10 @@ td{
     user-select: none;
 }
 
-.bas{
-    border-bottom: 3px solid black;
+.bas, .haut, .right, .left{
+    border-left: 3px;
 }
 
-.haut{
-    border-top: 3px solid black;
-}
-
-.right{
-    border-right: 3px solid black;
-}
-
-.left{
-    border-left: 3px solid black;
-}
 
 button{
  margin-top: 5px;
@@ -38,7 +27,6 @@ div>div{
     display: table-cell;
     width: 20px;
     height: 20px;
-    border: 1px solid black;
     user-select: none;
 
 }
